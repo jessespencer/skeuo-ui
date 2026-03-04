@@ -52,13 +52,20 @@
   --accent-gradient-from: #96cc0c;
   --accent-gradient-to: #96cc0c;
   --slider-fill-highlight: inset 0 3px 0 rgba(255,255,255,0.8);
+  --icon-hover-filter: brightness(1.3);
+  --icon-active-glow: none;
+  --switch-track-on-from: var(--accent-gradient-from);
+  --switch-track-on-to: var(--accent-gradient-to);
+  --switch-track-on-highlight: inset 0 2px 0 rgba(255,255,255,0.8);
+  --pagination-active-shadow: 0 0 8px var(--color-accent-glow), 0 2px 2px rgba(0,0,0,0.3);
+  --pagination-active-highlight: inset 0 2px 0 rgba(255,255,255,0.5);
 }
 
 /* ── Light mode overrides ─────────────────────────────── */
 [data-theme="light"] {
   --color-bg: #f0f0f0;
   --color-accent: #0065ff;
-  --color-accent-glow: rgba(0, 101, 255, 0.4);
+  --color-accent-glow: rgba(0, 109, 250, 0.7);
   --color-accent-focus: #0065ff;
   --color-accent-active: #0065ff;
   --color-surface-raised-from: #ffffff;
@@ -76,7 +83,7 @@
 
   --shadow-raised: 2px 8px 24px rgba(0,0,0,0.12);
   --shadow-inner-highlight: inset 0 2px 0 white;
-  --shadow-inner-pressed: inset -3px -3px 7px white, inset 3px 3px 7px rgba(156,156,156,0.48);
+  --shadow-inner-pressed: inset 0 2px 3px rgba(0,0,0,0.12);
   --shadow-pressed-outer: none;
   --shadow-focus: 0 0 0 2px #0065ff;
   --shadow-focus-glow: 0 0 0 2px #0065ff;
@@ -84,15 +91,15 @@
   --text-shadow-primary: none;
   --gradient-stroke-from: rgba(255,255,255,0.6);
   --gradient-stroke-to: rgba(255,255,255,0.6);
-  --icon-fill-from: #999999;
-  --icon-fill-to: #777777;
-  --icon-stroke-from: rgba(255,255,255,0.6);
-  --icon-stroke-to: rgba(255,255,255,0.6);
+  --icon-fill-from: #AEAEAE;
+  --icon-fill-to: #AEAEAE;
+  --icon-stroke-from: transparent;
+  --icon-stroke-to: transparent;
   --icon-pressed-color: #0065ff;
   --surface-disabled-from: rgba(200,200,200,0.5);
   --surface-disabled-to: rgba(180,180,180,0.5);
   --switch-track-off-bg: #d0d0d0;
-  --switch-track-off-shadow: inset -3px -3px 7px white, inset 3px 3px 7px rgba(156,156,156,0.48);
+  --switch-track-off-shadow: inset 0 1px 5px rgba(0,0,0,0.15);
   --switch-track-on-shadow: 0 0 8px rgba(0,101,255,0.4);
   --switch-on-text-shadow: 0 0 8px rgba(0,101,255,0.4);
   --handle-shadow: 0 2px 4px rgba(0,0,0,0.15);
@@ -100,7 +107,21 @@
   --checkbox-hover-to: #d0d0d0;
   --accent-gradient-from: rgb(43,140,255);
   --accent-gradient-to: rgb(3,84,206);
-  --slider-fill-highlight: inset 0 2px 0 rgba(255,255,255,0.6);
+  --slider-fill-highlight: inset 0 2px 0 rgba(255,255,255,0.7);
+  --icon-hover-filter: brightness(0.684);
+  --icon-pressed-highlight-opacity: 1;
+  --icon-active-glow: drop-shadow(0 0 6px rgba(0,101,255,0.7));
+  --switch-track-on-from: var(--accent-gradient-from);
+  --switch-track-on-to: var(--accent-gradient-to);
+  --switch-track-on-shadow: 0 0 8px rgba(0,101,255,0.4);
+  --switch-track-on-highlight: inset 0 1px 0 rgba(255,255,255,0.7);
+  --pagination-active-shadow: 0 0 8px var(--color-accent-glow);
+  --pagination-active-highlight: none;
+}
+
+/* Light mode: flat icons — no drop shadow */
+[data-theme="light"] .icon-group {
+  filter: none;
 }
 
 * {

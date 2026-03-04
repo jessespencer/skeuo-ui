@@ -16,8 +16,8 @@ export function Pagination({ total, current, onChange }: PaginationProps) {
         >
           {i === current ? (
             // Active dot — accent with glow
-            <div className="w-[16px] h-[16px] rounded-full bg-accent shadow-[0_0_8px_var(--color-accent-glow),0_2px_2px_rgba(0,0,0,0.3)]">
-              <div className="w-full h-full rounded-full shadow-[inset_0_2px_0_rgba(255,255,255,0.5)]" />
+            <div className="w-[16px] h-[16px] rounded-full bg-accent shadow-[var(--pagination-active-shadow)]">
+              <div className="w-full h-full rounded-full shadow-[var(--pagination-active-highlight)]" />
             </div>
           ) : (
             // Inactive dot — pressed surface, lightens on hover

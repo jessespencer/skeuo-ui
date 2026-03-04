@@ -37,9 +37,9 @@ export function Switch({ checked, onChange }: SwitchProps) {
         {checked ? (
           <div
             className="absolute left-[16px] top-[16px] w-[48px] h-[8px] rounded-[4px] shadow-[var(--switch-track-on-shadow)]"
-            style={{ background: 'linear-gradient(to right, var(--accent-gradient-from), var(--accent-gradient-to))' }}
+            style={{ background: 'linear-gradient(to right, var(--switch-track-on-from), var(--switch-track-on-to))' }}
           >
-            <div className="absolute inset-0 rounded-[inherit] shadow-[inset_0_2px_0_rgba(255,255,255,0.8)]" />
+            <div className="absolute inset-0 rounded-[inherit] shadow-[var(--switch-track-on-highlight)]" />
           </div>
         ) : (
           <div

@@ -10,13 +10,14 @@ type IconProps = Omit<SVGProps<SVGSVGElement>, 'path'>
  */
 export const iconState = {
   default: '',
-  hover: '[&_svg]:[filter:brightness(1.3)]',
+  hover: '[&_svg]:[filter:var(--icon-hover-filter)]',
   pressed: [
     '[&_.icon-fill]:[fill:var(--icon-pressed-color)]',
     '[&_.icon-stroke]:[display:none]',
     '[&_.icon-shape]:[fill:var(--icon-pressed-color)]',
     '[&_.icon-shape]:[stroke:none]',
     '[&_g]:[filter:var(--skeuo-pressed-filter)]',
+    '[&_svg]:[filter:var(--icon-active-glow)]',
   ].join(' '),
   disabled: '[&_svg]:opacity-30',
 } as const
@@ -69,7 +70,7 @@ function SkeuoIcon({ fillPath, strokePath, path, viewBox = '0 0 24 24', ...props
           <feOffset in="invAlpha" dy="3" result="isOff"/>
           <feGaussianBlur in="isOff" stdDeviation="0.5" result="isBlur"/>
           <feComposite in="isBlur" in2="SourceAlpha" operator="in" result="isMask"/>
-          <feFlood floodColor="white" floodOpacity="0.7" result="isColor"/>
+          <feFlood floodColor="white" result="isColor" style={{ floodOpacity: 'var(--icon-pressed-highlight-opacity, 0.7)' } as React.CSSProperties}/>
           <feComposite in="isColor" in2="isMask" operator="in" result="innerShadow"/>
           <feBlend in="innerShadow" in2="withDrop"/>
         </filter>
@@ -82,7 +83,7 @@ function SkeuoIcon({ fillPath, strokePath, path, viewBox = '0 0 24 24', ...props
           <stop offset="1" style={{ stopColor: 'var(--icon-stroke-to)' }}/>
         </linearGradient>
       </defs>
-      <g filter={`url(#${id}-f)`}>
+      <g filter={`url(#${id}-f)`} className="icon-group">
         {path ? (
           <path
             className="icon-shape"
