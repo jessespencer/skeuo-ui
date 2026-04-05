@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# Neumorphic UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A neumorphic, iOS-inspired component library — designed in Figma, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+**[Live Demo](https://jessespencer.github.io/uber-ui/)** | **[Dribbble](https://dribbble.com/shots/10826325-Uber-Dark-UI-Kit)** | **[Figma Community File](https://www.figma.com/community/file/824492970627116776)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## The Story
 
-## React Compiler
+Back in 2012, when skeuomorphic design reigned supreme, I built one of my first UI Kits in Photoshop *(remember those?)*. Eight years later — March 2020, deep in lockdown with nowhere to go — I finally rebuilt it in Figma.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Then in March 2026, something clicked. With Figma MCP + Claude, I could take those designs and generate real React components directly from the source. Six years between Photoshop and Figma. Six years between Figma and this.
 
-## Expanding the ESLint configuration
+What started as a quarantine project is now a live demonstration of where design-to-code is heading: **from Figma, through AI, straight to production-ready frontend code.**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎨 Neumorphic, iOS-inspired design system
+- ⚛️ Built with React + TypeScript
+- 💨 Styled with Tailwind CSS
+- 🌗 Full dark / light theme support
+- 🔌 Generated via Figma MCP → Claude → React
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Tool | Role |
+|------|------|
+| Figma | Design source |
+| Figma MCP + Claude | Design-to-code pipeline |
+| React + TypeScript | Component framework |
+| Tailwind CSS | Styling |
+
+## Components
+
+- **Button** — Multi-variant with hover, focus, active, and pressed states
+- **Switch** — Toggle with ON/OFF text and polished knob
+- **RockerToggle** — Two-position rocker switch (O/| symbols)
+- **Dropdown** — Searchable dropdown menu
+- **SearchInput** — Styled text input with search icon
+- **Checkbox** — Custom styled checkbox
+- **Pagination** — Page navigation controls
+- **Slider** — Range input with custom track/thumb
+- **SegmentedControl** — Tab-like selector (text or icon variants)
+- **Toast** — Status notifications (success, error, warning, info)
+- **Tooltip** — Contextual hover tooltips
+- **Icons** — Custom SVG icon set (Home, Bolt, Star, Bell, and more)
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Opens at `http://localhost:5173/uber-ui/`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Command | Description |
+|------|------|
+| `npm run dev` | Start dev server with HMR |
+| `npm run build` | Type-check + production build to `dist/` |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+
+## Deployment
+
+Automatically deployed to GitHub Pages on push to `main` via GitHub Actions.
