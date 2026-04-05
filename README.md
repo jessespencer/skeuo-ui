@@ -1,8 +1,8 @@
-# Uber UI
+# Skeuo UI
 
 > A skeuomorphic, iOS-inspired component library — designed in Figma, built with React, TypeScript, and Tailwind CSS.
 
-**[Live Demo](https://jessespencer.github.io/uber-ui/)** | **[Dribbble](https://dribbble.com/shots/10826325-Uber-Dark-UI-Kit)** | **[Figma Community File](https://www.figma.com/community/file/824492970627116776)**
+**[Live Demo](https://jessespencer.github.io/skeuo-ui/)** | **[Dribbble](https://dribbble.com/shots/10826325-Uber-Dark-UI-Kit)** | **[Figma Community File](https://www.figma.com/community/file/824492970627116776)**
 
 ## The Story
 
@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-Opens at `http://localhost:5173/uber-ui/`
+Opens at `http://localhost:5173/skeuo-ui/`
 
 ## Scripts
 

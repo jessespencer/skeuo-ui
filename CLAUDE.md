@@ -1,4 +1,4 @@
-# Uber Dark UI Kit
+# Skeuo UI
 
 ## Project Overview
 Neumorphic component library showcasing iOS-inspired dark/light UI design. Single-page demo app — all components rendered in `src/App.tsx`.
@@ -6,7 +6,7 @@ Neumorphic component library showcasing iOS-inspired dark/light UI design. Singl
 ## Tech Stack
 - React 19 + TypeScript (strict) + Vite 7 + Tailwind CSS 4
 - No state management library — React Context for theming only
-- Deployed to GitHub Pages at `/uber-ui/` base path
+- Deployed to GitHub Pages at `/skeuo-ui/` base path
 
 ## Project Structure
 - `src/components/` — All UI components (Button, Switch, Dropdown, Slider, etc.)
@@ -25,7 +25,7 @@ Neumorphic component library showcasing iOS-inspired dark/light UI design. Singl
 
 ## Development
 ```bash
-npm run dev      # Dev server at localhost:5173/uber-ui/
+npm run dev      # Dev server at localhost:5173/skeuo-ui/
 npm run build    # TypeScript check + Vite build → dist/
 npm run lint     # ESLint
 ```

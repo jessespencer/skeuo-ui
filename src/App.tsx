@@ -24,7 +24,7 @@ export default function App() {
   const [pressed, setPressed] = useState(true)
   const [iconPressed, setIconPressed] = useState(true)
   const [dropdownValue, setDropdownValue] = useState<string | undefined>()
-  const [searchValue, setSearchValue] = useState('Uber Dark UI Kit V3')
+  const [searchValue, setSearchValue] = useState('Skeuo UI')
   const [segmentedValue, setSegmentedValue] = useState('home')
   const [page, setPage] = useState(2)
   const [check1, setCheck1] = useState(true)
