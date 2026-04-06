@@ -142,6 +142,20 @@ export default function App() {
         </div>
 
       </div>
+
+      <footer className="fixed bottom-0 left-0 right-0 py-6 text-center">
+        <span className="text-xs" style={{ color: 'var(--color-footer)' }}>
+          Built by{" "}
+          <a
+            href="https://www.jessedestroys.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-70 transition-opacity"
+          >
+            jessedestroys.com
+          </a>
+        </span>
+      </footer>
     </div>
   )
 }

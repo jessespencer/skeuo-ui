@@ -59,6 +59,7 @@
   --switch-track-on-highlight: inset 0 2px 0 rgba(255,255,255,0.8);
   --pagination-active-shadow: 0 0 8px var(--color-accent-glow), 0 2px 2px rgba(0,0,0,0.3);
   --pagination-active-highlight: inset 0 2px 0 rgba(255,255,255,0.5);
+  --color-footer: #9e9e9e;
 }
 
 /* ── Light mode overrides ─────────────────────────────── */
@@ -117,6 +118,7 @@
   --switch-track-on-highlight: inset 0 1px 0 rgba(255,255,255,0.7);
   --pagination-active-shadow: 0 0 8px var(--color-accent-glow);
   --pagination-active-highlight: none;
+  --color-footer: #6e6e6e;
 }
 
 /* Light mode: flat icons — no drop shadow */
