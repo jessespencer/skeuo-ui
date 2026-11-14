@@ -147,12 +147,12 @@ export default function App() {
         <span className="text-xs" style={{ color: 'var(--color-footer)' }}>
           Built by{" "}
           <a
-            href="https://www.jessedestroys.com"
+            href="https://jessespencer.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:opacity-70 transition-opacity"
           >
-            jessedestroys.com
+            jessespencer.dev
           </a>
         </span>
       </footer>
